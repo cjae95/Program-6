@@ -34,9 +34,9 @@
                  <th>MPH Over</th>
                  <th>Violator Sex</th>
              </tr>
-             <tr v-for = "d in speedOver25">
-                 <td>{{d.actual_speed}}</td><td>{{d.age}}</td><td>{{d.posted_speed}}</td><td>{{d.stop_date}}</td><td>{{d.stop}}</td><td>{{d.tid}}</td><td>{{d.violator_sex}}</td>
-             </tr>
+             <tr>
+                 <tr v-for="mphover in tickets">
+                 </tr>
         </table>
  
 </div>   
@@ -57,6 +57,10 @@
                  const response = await fetch('tickets1.json')
                  this.tickets = await response.json()   
              },
+            getTickets() {
+                this.showTable = true
+                this.tickets = this.results.filter( ())
+            }
              
          }
        })
